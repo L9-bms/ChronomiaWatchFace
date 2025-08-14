@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<WatchFace width="450" height="450">
+    <Metadata key="CLOCK_TYPE" value="ANALOG" />
+    <Metadata key="PREVIEW_TIME" value="10:08:32" />
+    <Scene backgroundColor="#000000">
+        <PartImage x="0" y="0" width="450" height="450">
+            <Image resource="bg" />
+        </PartImage>
+
+        <AnalogClock x="0" y="0" width="450" height="450">
+            <HourHand
+                resource="hour"
+                x="185"
+                y="50"
+                width="96"
+                height="203"
+                pivotX="0.5"
+                pivotY="0.9" />
+            <MinuteHand
+                resource="minute"
+                x="190"
+                y="0"
+                width="69"
+                height="242"
+                pivotX="0.5"
+                pivotY="0.9" />
+        </AnalogClock>
+
+        <PartImage x="170" y="170" width="110" height="110">
+            <Image resource="diamond" />
+        </PartImage>
+    </Scene>
+</WatchFace>
