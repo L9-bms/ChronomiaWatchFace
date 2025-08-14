@@ -1,6 +1,13 @@
+import java.util.Properties
+import java.io.FileInputStream
+
 plugins {
     alias(libs.plugins.android.application)
 }
+
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+val keystoreProperties = Properties()
+keystoreProperties.load(FileInputStream(keystorePropertiesFile))
 
 android {
     namespace = "com.callumwong.chronomiawatchface"
@@ -19,7 +26,15 @@ android {
             isMinifyEnabled = false
         }
         release {
-            // TODO:Add your signingConfig here to build release builds
+            signingConfigs {
+                create("config") {
+                    keyAlias = keystoreProperties["keyAlias"] as String
+                    keyPassword = keystoreProperties["keyPassword"] as String
+                    storeFile = file(keystoreProperties["storeFile"] as String)
+                    storePassword = keystoreProperties["storePassword"] as String
+                }
+            }
+
             isMinifyEnabled = true
             isShrinkResources = false
 
