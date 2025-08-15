@@ -18,3 +18,4 @@ local.properties
 /watchface/build/
 
 keystore.properties
+.idea
