@@ -10,20 +10,20 @@
         <AnalogClock x="0" y="0" width="450" height="450">
             <HourHand
                 resource="hour"
-                x="185"
-                y="50"
+                x="175"
+                y="48"
                 width="96"
                 height="203"
                 pivotX="0.5"
-                pivotY="0.9" />
+                pivotY="0.866995074" />
             <MinuteHand
                 resource="minute"
                 x="190"
-                y="0"
+                y="8"
                 width="69"
                 height="242"
                 pivotX="0.5"
-                pivotY="0.9" />
+                pivotY="0.888429752" />
         </AnalogClock>
 
         <PartImage x="170" y="170" width="110" height="110">
